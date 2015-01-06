@@ -13,7 +13,7 @@ Simple and small library to inject resources into DOM at any time.
 ```
 ## Features
 * Synchronous module injection
-* JS, CSS, HTML
+* JS, CSS, HTML Support
 
 ## Requirements
 
@@ -22,29 +22,26 @@ Simple and small library to inject resources into DOM at any time.
 
 ## Design Goals
 
+#### Primary Goals
+1. Extremely Simple API 
+2. Keep it small (micro library size).
+3. Keep it fast.
+4. Properly tested.
 
-### Design Goals (By Priority)
-
-#### Primary
-* Simple API 
-* Keep it small (micro library size).
-* Keep it fast.
-
-#### Secondary
-* Use simple injection techniques
-* Avoid parsing HTML for logic (2-way binding style). These are usually slow.
-
+#### Design decisions to achieve goals
+* Use simple injection techniques. (Simple script loads) [2] [3]
+* Avoid parsing HTML for logic (2-way binding style). [2]
+* Support only evergreen browsers [2] [3]
 
 ## Possible Use Cases
 
-* **Lazy loading for conditional builds and large scale apps**: inject files based on any conditions, whether browser type or user event.
-* **Lazy loading for 
-
+* **Lazy loading for conditional builds**: inject files based on any conditions, whether browser type or user event.
+* **Lazy loading for large-scale apps**: Load modules as you need them.
 
 ## Roadmap
 
 * Enable Browserify bundle lazy loading
-* Emit events on module loads
+* Emit events on module loads for loading screen integration.
 * Ability to remove resources (?)
 * Async loading (?)
 
