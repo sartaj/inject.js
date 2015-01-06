@@ -1,4 +1,4 @@
-inject.js (0.0.1) [dev preview]
+inject.js (0.1.0)
 =========
 Simple and small library client-side browser library to inject resources into DOM at any time. 
 
@@ -41,11 +41,19 @@ Simple and small library client-side browser library to inject resources into DO
 * Support only evergreen browsers [2] [3]
 
 ## Roadmap
+
+#### 0.2.0
 * Write tests
 * Hook into OSS devops services
+
+#### 1.0.0 [production release]
 * Dynamic names (for minification)
-* Enable Browserify bundle lazy loading
+
+#### 1.1.0
 * Emit events on module loads for loading screen integration.
+
+#### Backlog
+* Enable Browserify bundle lazy loading
 * Ability to remove resources (?)
 * Async loading (?)
 
