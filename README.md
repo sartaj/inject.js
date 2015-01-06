@@ -1,8 +1,5 @@
 inject.js (0.0.1)
 =========
-
-**NOTE: This module is currently in development and not ready for production.**
-
 Simple and small library client-side browser library to inject resources into DOM at any time. 
 
 ## API
@@ -17,8 +14,10 @@ Simple and small library client-side browser library to inject resources into DO
 
 ## Requirements
 
-* This module only tests evergreen browsers (latest versions).
+* **This module is currently in development and not ready for production.**
+* This module will only test evergreen browsers (latest versions).
 * HTML injection requires Web Components to be enabled. See `Polymer` for a shim.
+* Dynamic names not support yet.
 
 ## Possible Use Cases
 
@@ -26,7 +25,7 @@ Simple and small library client-side browser library to inject resources into DO
 
 * **Conditional builds**: inject files based on any conditions, whether browser type or user event.
 * **Large-scale apps**: Load modules as you need them.
-* **Module loaders (like Browserify)**: Load modules as you need them.
+* **Module loaders that don't support lazy loading (like Browserify)**: Load modules as you need them.
 
 ## Design Goals
 
@@ -42,6 +41,8 @@ Simple and small library client-side browser library to inject resources into DO
 * Support only evergreen browsers [2] [3]
 
 ## Roadmap
+* Write tests
+* Hook into OSS devops services
 * Dynamic names (for minification)
 * Enable Browserify bundle lazy loading
 * Emit events on module loads for loading screen integration.
