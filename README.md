@@ -20,6 +20,14 @@ Simple and small library client-side browser library to inject resources into DO
 * This module only tests evergreen browsers (latest versions).
 * HTML injection requires Web Components to be enabled. See `Polymer` for a shim.
 
+## Possible Use Cases
+
+### Lazy Loading for:
+
+* **Conditional builds**: inject files based on any conditions, whether browser type or user event.
+* **Large-scale apps**: Load modules as you need them.
+* **Module loaders (like Browserify)**: Load modules as you need them.
+
 ## Design Goals
 
 #### Primary Goals
@@ -32,12 +40,6 @@ Simple and small library client-side browser library to inject resources into DO
 * Use simple injection techniques. (Simple script loads) [2] [3]
 * Avoid parsing HTML for logic (2-way binding style). [2]
 * Support only evergreen browsers [2] [3]
-
-## Possible Use Cases
-
-* **Lazy loading for conditional builds**: inject files based on any conditions, whether browser type or user event.
-* **Lazy loading for large-scale apps**: Load modules as you need them.
-* **Lazy loading for module loaders (like Browserify)**: Load modules as you need them.
 
 ## Roadmap
 
