@@ -1,4 +1,4 @@
-inject.js (0.0.1)
+inject.js (0.0.1) [dev preview]
 =========
 Simple and small library client-side browser library to inject resources into DOM at any time. 
 
