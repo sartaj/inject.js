@@ -41,7 +41,7 @@ Simple and small library client-side browser library to inject resources into DO
 * Avoid parsing HTML for logic (2-way binding style). [2]
 * Support only evergreen browsers [2] [3]
 
-## Roadmap (in order)
+## Roadmap
 * Dynamic names (for minification)
 * Enable Browserify bundle lazy loading
 * Emit events on module loads for loading screen integration.
