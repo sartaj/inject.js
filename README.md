@@ -3,7 +3,7 @@ inject.js (0.0.1)
 
 **NOTE: This module is currently in development and not ready for production.**
 
-Simple and small library to inject resources into DOM at any time. 
+Simple and small library client-side browser library to inject resources into DOM at any time. 
 
 ## API
 ```
