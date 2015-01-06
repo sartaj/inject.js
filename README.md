@@ -1,4 +1,4 @@
-inject.js (0.0.0)
+inject.js (0.0.1)
 =========
 
 **NOTE: This module is currently in development and not ready for production.**
@@ -11,15 +11,35 @@ Simple and small library to inject resources into DOM at any time.
   inject('elements/web-component.html');
   inject('ui-skin.js');
 ```
+## Features
+* Synchronous module injection
+* JS, CSS, HTML
 
 ## Requirements
 
 * This module only tests evergreen browsers (latest versions).
 * HTML injection requires Web Components to be enabled. See `Polymer` for a shim.
 
-## Purpose
+## Design Goals
 
-I wanted a simple micro library to lazy-load modules in large scale apps.
+
+### Design Goals (By Priority)
+
+#### Primary
+* Simple API 
+* Keep it small (micro library size).
+* Keep it fast.
+
+#### Secondary
+* Use simple injection techniques
+* Avoid parsing HTML for logic (2-way binding style). These are usually slow.
+
+
+## Possible Use Cases
+
+* **Lazy loading for conditional builds and large scale apps**: inject files based on any conditions, whether browser type or user event.
+* **Lazy loading for 
+
 
 ## Roadmap
 
