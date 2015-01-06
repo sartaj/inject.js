@@ -37,6 +37,7 @@ Simple and small library to inject resources into DOM at any time.
 
 * **Lazy loading for conditional builds**: inject files based on any conditions, whether browser type or user event.
 * **Lazy loading for large-scale apps**: Load modules as you need them.
+* **Lazy loading for module loaders (like Browserify)**: Load modules as you need them.
 
 ## Roadmap
 
