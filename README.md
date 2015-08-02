@@ -1,7 +1,7 @@
 lean.js (1.0.0)
 =========
 
-![leanjs!](./about/lean.jpg)
+![leanjs!](./about/lean.png)
 
 Simple and small library client-side browser library to inject HTML, CSS, or JS into DOM at any time.
 
