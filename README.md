@@ -7,9 +7,9 @@ Simple and small library client-side browser library to inject HTML, CSS, or JS 
 
 ## API
 ```
-  lean.inject('./bundle.js);
+  lean.inject('bundle.js');
   lean.inject('elements/web-component.html');
-  lean.inject('ui-skin.css');
+  lean.inject('styles/ui-skin.css');
 ```
 ## Features
 * Synchronous module injection
