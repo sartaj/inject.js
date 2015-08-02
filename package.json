@@ -1,0 +1,39 @@
+{
+  "name": "lean.js",
+  "version": "1.0.0",
+  "description": "Lazy Load Web Components",
+  "main": "lean.js",
+  "scripts": {
+    "test": "browserify test/*.js | tape-run",
+    "build-js": "browserify -e src/lean.js -s lean | uglifyjs -mc > lean.min.js",
+    "watch-js": "watchify src/lean.js -s lean -o lean.min.js -dv",
+    "watch-tests": "nodemon --watch test --watch ./ --ext js --exec npm test",
+    "watch": "npm run watch-tests & npm run watch-js",
+    "build": "npm run build-js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sartaj/lean.js.git"
+  },
+  "keywords": [
+    "Web",
+    "Components",
+    "Polymer",
+    "Lazy"
+  ],
+  "author": "sartaj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sartaj/lean.js/issues"
+  },
+  "homepage": "https://github.com/sartaj/lean.js#readme",
+  "devDependencies": {
+    "browserify": "^11.0.1",
+    "nodemon": "^1.4.0",
+    "tap-spec": "^4.0.2",
+    "tape": "^4.0.1",
+    "tape-catch": "^1.0.4",
+    "tape-run": "^1.1.0",
+    "watchify": "^3.3.1"
+  }
+}
