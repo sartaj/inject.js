@@ -1,6 +1,6 @@
 {
   "name": "lean.js",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Lazy Load Web Components",
   "main": "lean.js",
   "scripts": {

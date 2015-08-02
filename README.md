@@ -1,12 +1,12 @@
-inject.js (0.1.0)
+lean.js (1.0.0)
 =========
-Simple and small library client-side browser library to inject resources into DOM at any time. 
+Simple and small library client-side browser library to inject HTML, CSS, or JS into DOM at any time.
 
 ## API
 ```
-  inject('script.js);
-  inject('elements/web-component.html');
-  inject('ui-skin.js');
+  lean.inject('script.js);
+  lean.inject('elements/web-component.html');
+  lean.inject('ui-skin.js');
 ```
 ## Features
 * Synchronous module injection
@@ -24,14 +24,14 @@ Simple and small library client-side browser library to inject resources into DO
 ### Lazy Loading for:
 
 * **Conditional builds**: inject files based on any conditions, whether browser type or user event.
-* **Large-scale apps**: Load modules as you need them.
+* **Ecosystem apps**: Load modules like widgets as you need them.
 * **Module loaders that don't support lazy loading (like Browserify)**: Load modules as you need them.
 
 ## Design Goals
 
 #### Primary Goals
 1. Extremely Simple API 
-2. Keep it small (micro library size).
+2. Keep it small.
 3. Keep it fast.
 4. Properly tested.
 
