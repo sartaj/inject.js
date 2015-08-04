@@ -17,8 +17,9 @@ var injectHtml = require('./lib/injectHtml.js');
  * 
  * @example
  * // injects file if needed and returns DOMNode  <todo-widget></todo-widget>
- *  lean.inject('./widgets/todo-widget.html');
- *  var todoWidget = document.createElement('todo-widget');
+ *  var name = lean.inject('./widgets/todo-widget.html');
+ *  var todoWidget = document.createElement(name);
+ *  var anotherWayTodoWidget = document.createElement('todo-widget');
  * 
  */
 module.exports.inject = function(path) {
@@ -39,8 +40,10 @@ module.exports.inject = function(path) {
  * 
  * 
  * @example
- * // injects file if needed and returns DOMNode  <todo-widget></todo-widget>
+ * // injects file and returns DOMNode  <todo-widget></todo-widget>
  *  var todoWidget = lean.require('./widgets/todo-widget.html');
+ * // won't inject file since injected above, and just create new element and require
+ *  var todoWidgetAgain = lean.require('./widgets/todo-widget.html');
  * 
  */
 module.exports.require = function(path) {
