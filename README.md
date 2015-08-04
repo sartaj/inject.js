@@ -3,7 +3,7 @@ lean.js (1.0.0)
 
 ![leanjs!](./about/lean.png)
 
-Simple and small library client-side browser library to lazy load and import Web Components.
+A micro-library (2kb) to lazy load and import Web Components.
 
 ## Features
 * Synchronous module injection
@@ -28,8 +28,9 @@ Simple and small library client-side browser library to lazy load and import Web
 **Example**
 ```js
 // injects file if needed and returns DOMNode  <todo-widget></todo-widget>
- lean.inject('./widgets/todo-widget.html');
- var todoWidget = document.createElement('todo-widget');
+ var name = lean.inject('./widgets/todo-widget.html');
+ var todoWidget = document.createElement(name);
+ var anotherWayTodoWidget = document.createElement('todo-widget');
 ```
 <a name="require"></a>
 ## require(file) ⇒ <code>DOMElement</code>
@@ -42,14 +43,16 @@ Simple and small library client-side browser library to lazy load and import Web
 
 **Example**
 ```js
-// injects file if needed and returns DOMNode  <todo-widget></todo-widget>
+// injects file and returns DOMNode  <todo-widget></todo-widget>
  var todoWidget = lean.require('./widgets/todo-widget.html');
+// won't inject file since injected above, and just create new element and require
+ var todoWidgetAgain = lean.require('./widgets/todo-widget.html');
 ```
+
 ## Requirements
 
-* **This module is currently in development and not ready for production.**
 * This module will only test evergreen browsers (latest versions).
-* HTML injection requires Web Components to be enabled. See `Polymer` for a shim.
+* This project does not require `Polymer`, but does require Web Components to be enabled. See `webcomponents-js` for a shim.
 * Dynamic names not support yet.
 
 ## Possible Use Cases
@@ -83,6 +86,3 @@ Simple and small library client-side browser library to lazy load and import Web
 
 #### Backlog
 * Async stream loading
-
-## Credits
-* Portions of the codebase are a fork of `yepnope.js`
