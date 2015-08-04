@@ -1,0 +1,54 @@
+<!doctype html>
+<!--
+Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <title>core-toolbar</title>
+    <script src="https://www.polymer-project.org/0.5/components/webcomponentsjs/webcomponents.js"></script>
+    <link rel="import" href="../lean.html">
+    <script>
+    </script>
+    <style>
+    body {
+        font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+        margin: 0;
+        padding: 24px;
+    }
+    
+    core-toolbar {
+        color: #f1f1f1;
+        fill: #f1f1f1;
+    }
+    </style>
+</head>
+
+<body unresolved>
+
+    <script>
+    setTimeout(function() {
+        var webComponent = lean.require('https://www.polymer-project.org/0.5/components/core-toolbar/core-toolbar.html');
+        document.body.appendChild(webComponent);
+    }, 1000);
+
+    setTimeout(function() {
+        var webComponent = lean.require('https://www.polymer-project.org/0.5/components/core-toolbar/core-toolbar.html');
+        document.body.appendChild(webComponent);
+    }, 5000);
+
+    setTimeout(function() {
+        var webComponent = lean.inject('https://www.polymer-project.org/0.5/components/paper-fab/paper-fab.html');
+        webComponent = document.createElement(webComponent);
+        document.body.appendChild(webComponent);
+    }, 2000);
+    </script>
+</body>
+
+</html>

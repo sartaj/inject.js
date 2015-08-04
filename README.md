@@ -3,17 +3,36 @@ lean.js (1.0.0)
 
 ![leanjs!](./about/lean.png)
 
-Simple and small library client-side browser library to inject HTML, CSS, or JS into DOM at any time.
+Simple and small library client-side browser library to lazy load and import Web Components.
 
-## API
-```
-  lean.inject('bundle.js');
-  lean.inject('elements/web-component.html');
-  lean.inject('styles/ui-skin.css');
-```
 ## Features
 * Synchronous module injection
-* JS, CSS, HTML Support
+* HTML Support
+
+| Param | Type | Description |
+| --- | --- | --- |
+| file | <code>string</code> | a http file path. |
+| callback | <code>bool</code> &#124; <code>function</code> | either return the create html element or js variable or return the returned element from the script. |
+
+**Example**
+```js
+lean.inject('./widgets/todo-widget.html');
+ var todoWidget = document.createElement('todo-widget');
+```
+<a name="require"></a>
+## require(path) ⇒ <code>DOMElement</code>
+**Kind**: global function
+**Returns**: <code>DOMElement</code> - - HTML Imports return a createdDOM Element the import. This will execute the 'createdCallback' or 'created' function in the Web Component.
+
+| Param | Type | Description |
+| --- | --- | --- |
+| path | <code>string</code> | a http file path. |
+
+**Example**
+```js
+// injects file if needed and returns DOMNode  <todo-widget></todo-widget>
+ var todoWidget = lean.require('./widgets/todo-widget.html');
+```
 
 ## Requirements
 
@@ -27,8 +46,7 @@ Simple and small library client-side browser library to inject HTML, CSS, or JS 
 ### Lazy Loading for:
 
 * **Conditional builds**: inject files based on any conditions, whether browser type or user event.
-* **Ecosystem apps**: Load modules like widgets as you need them.
-* **Module loaders that don't support lazy loading (like Browserify)**: Load modules as you need them.
+* **Large Scale Ecosystem apps**: Lazy load modules like widgets as you need them.
 
 ## Design Goals
 
@@ -40,25 +58,20 @@ Simple and small library client-side browser library to inject HTML, CSS, or JS 
 
 #### Design decisions to achieve goals
 * Use simple injection techniques. (Simple script loads) [2] [3]
-* Avoid parsing HTML for logic (2-way binding style). [2]
+* Allow instant usage of web component if desired. [2] [1]
 * Support only evergreen browsers [2] [3]
 
 ## Roadmap
 
-#### 0.2.0
+#### 1.0.0 [production release]
 * Write tests
 * Hook into OSS devops services
-
-#### 1.0.0 [production release]
-* Dynamic names (for minification)
 
 #### 1.1.0
 * Emit events on module loads for loading screen integration.
 
 #### Backlog
-* Enable Browserify bundle lazy loading
-* Ability to remove resources (?)
-* Async loading (?)
+* Async stream loading
 
 ## Credits
 * Portions of the codebase are a fork of `yepnope.js`

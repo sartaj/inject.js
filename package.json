@@ -5,10 +5,10 @@
   "main": "lean.js",
   "scripts": {
     "test": "browserify test/*.js | tape-run",
-    "build-js": "browserify -e src/lean.js -s lean | uglifyjs -mc > lean.min.js",
-    "watch-js": "watchify src/lean.js -s lean -o lean.min.js -dv",
+    "build-js": "browserify -e ./index.js -s lean | uglifyjs -mc > lean.min.js",
+    "watch-js": "watchify ./index.js -s lean -o lean.min.js -dv",
     "watch-tests": "nodemon --watch test --watch ./ --ext js --exec npm test",
-    "watch": "npm run watch-tests & npm run watch-js",
+    "dev": "npm run watch-tests & npm run watch-js",
     "build": "npm run build-js"
   },
   "repository": {
