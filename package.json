@@ -1,7 +1,7 @@
 {
-  "name": "lean.js",
+  "name": "lean-web-components",
   "version": "0.3.0",
-  "description": "Lazy Load Web Components",
+  "description": "A micro-library (2kb) to lazy load and import Web Components.",
   "main": "lean.js",
   "scripts": {
     "test": "browserify test/*.js | tape-run",
@@ -21,7 +21,7 @@
     "Polymer",
     "Lazy"
   ],
-  "author": "sartaj",
+  "author": "sartaj <sartaj@sartaj.me> (http://sartaj.me)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/sartaj/lean.js/issues"

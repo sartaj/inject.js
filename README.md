@@ -1,13 +1,19 @@
-lean.js (0.3.0)
+lean-web-components (0.3.0)
 =========
 
 ![leanjs!](./about/lean.png)
 
-A micro-library (2kb) to lazy load and import Web Components.
+A micro-library (1.7kb) to lazy load and import Web Components.
 
 ## Features
 * Synchronous module injection
 * HTML Support
+
+## Usage
+
+```
+ npm install lean-web-components
+```
 
 ## Functions
 <dl>
@@ -78,8 +84,9 @@ A micro-library (2kb) to lazy load and import Web Components.
 ## Roadmap
 
 #### 1.0.0 [production release]
-* Write tests
+* Pass tests
 * Hook into OSS devops services
+* Add to bower
 
 #### 1.1.0
 * Emit events on module loads for loading screen integration.
