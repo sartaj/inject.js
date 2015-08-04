@@ -16,6 +16,7 @@ var injectHtml = require('./lib/injectHtml.js');
  * @returns {string} - returns name of html file as a document create consumable name.
  * 
  * @example
+ * // injects file if needed and returns DOMNode  <todo-widget></todo-widget>
  *  lean.inject('./widgets/todo-widget.html');
  *  var todoWidget = document.createElement('todo-widget');
  * 
@@ -38,7 +39,7 @@ module.exports.inject = function(path) {
  * 
  * 
  * @example
- *  // injects file if needed and returns DOMNode  <todo-widget></todo-widget>
+ * // injects file if needed and returns DOMNode  <todo-widget></todo-widget>
  *  var todoWidget = lean.require('./widgets/todo-widget.html');
  * 
  */

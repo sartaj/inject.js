@@ -17,41 +17,6 @@ Simple and small library client-side browser library to lazy load and import Web
 <dd></dd>
 </dl>
 <a name="inject"></a>
-## .inject(file) ⇒ <code>string</code>
-**Kind**: global function
-**Returns**: <code>string</code> - - returns name of html file as a document create consumable name.
-
-| Param | Type | Description |
-| --- | --- | --- |
-| file | <code>string</code> | a http file path. |
-
-**Example**
-```js
-lean.inject('./widgets/todo-widget.html');
- var todoWidget = document.createElement('todo-widget');
-```
-<a name="require"></a>
-## .require(file) ⇒ <code>DOMElement</code>
-**Kind**: global function
-**Returns**: <code>DOMElement</code> - - HTML Imports return a createdDOM Element the import. This will execute the 'createdCallback' or 'created' function in the Web Component.
-
-| Param | Type | Description |
-| --- | --- | --- |
-| file | <code>string</code> | a http file path. |
-
-**Example**
-```js
-// injects file if needed and returns DOMNode  <todo-widget></todo-widget>
- var todoWidget = lean.require('./widgets/todo-widget.html');
-```
-## Functions
-<dl>
-<dt><a href="#inject">inject(file)</a> ⇒ <code>string</code></dt>
-<dd></dd>
-<dt><a href="#require">require(file)</a> ⇒ <code>DOMElement</code></dt>
-<dd></dd>
-</dl>
-<a name="inject"></a>
 ## inject(file) ⇒ <code>string</code>
 **Kind**: global function
 **Returns**: <code>string</code> - - returns name of html file as a document create consumable name.
@@ -62,7 +27,8 @@ lean.inject('./widgets/todo-widget.html');
 
 **Example**
 ```js
-lean.inject('./widgets/todo-widget.html');
+// injects file if needed and returns DOMNode  <todo-widget></todo-widget>
+ lean.inject('./widgets/todo-widget.html');
  var todoWidget = document.createElement('todo-widget');
 ```
 <a name="require"></a>
