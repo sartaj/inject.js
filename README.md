@@ -9,10 +9,21 @@ Simple and small library client-side browser library to lazy load and import Web
 * Synchronous module injection
 * HTML Support
 
+## Functions
+<dl>
+<dt><a href="#inject">inject(file)</a> ⇒ <code>string</code></dt>
+<dd></dd>
+<dt><a href="#require">require(file)</a> ⇒ <code>DOMElement</code></dt>
+<dd></dd>
+</dl>
+<a name="inject"></a>
+## .inject(file) ⇒ <code>string</code>
+**Kind**: global function
+**Returns**: <code>string</code> - - returns name of html file as a document create consumable name.
+
 | Param | Type | Description |
 | --- | --- | --- |
 | file | <code>string</code> | a http file path. |
-| callback | <code>bool</code> &#124; <code>function</code> | either return the create html element or js variable or return the returned element from the script. |
 
 **Example**
 ```js
@@ -20,20 +31,54 @@ lean.inject('./widgets/todo-widget.html');
  var todoWidget = document.createElement('todo-widget');
 ```
 <a name="require"></a>
-## require(path) ⇒ <code>DOMElement</code>
+## .require(file) ⇒ <code>DOMElement</code>
 **Kind**: global function
 **Returns**: <code>DOMElement</code> - - HTML Imports return a createdDOM Element the import. This will execute the 'createdCallback' or 'created' function in the Web Component.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| path | <code>string</code> | a http file path. |
+| file | <code>string</code> | a http file path. |
 
 **Example**
 ```js
 // injects file if needed and returns DOMNode  <todo-widget></todo-widget>
  var todoWidget = lean.require('./widgets/todo-widget.html');
 ```
+## Functions
+<dl>
+<dt><a href="#inject">inject(file)</a> ⇒ <code>string</code></dt>
+<dd></dd>
+<dt><a href="#require">require(file)</a> ⇒ <code>DOMElement</code></dt>
+<dd></dd>
+</dl>
+<a name="inject"></a>
+## inject(file) ⇒ <code>string</code>
+**Kind**: global function
+**Returns**: <code>string</code> - - returns name of html file as a document create consumable name.
 
+| Param | Type | Description |
+| --- | --- | --- |
+| file | <code>string</code> | a http file path. |
+
+**Example**
+```js
+lean.inject('./widgets/todo-widget.html');
+ var todoWidget = document.createElement('todo-widget');
+```
+<a name="require"></a>
+## require(file) ⇒ <code>DOMElement</code>
+**Kind**: global function
+**Returns**: <code>DOMElement</code> - - HTML Imports return a createdDOM Element the import. This will execute the 'createdCallback' or 'created' function in the Web Component.
+
+| Param | Type | Description |
+| --- | --- | --- |
+| file | <code>string</code> | a http file path. |
+
+**Example**
+```js
+// injects file if needed and returns DOMNode  <todo-widget></todo-widget>
+ var todoWidget = lean.require('./widgets/todo-widget.html');
+```
 ## Requirements
 
 * **This module is currently in development and not ready for production.**

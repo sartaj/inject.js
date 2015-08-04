@@ -13,13 +13,13 @@ var injectHtml = require('./lib/injectHtml.js');
 
 /**
  * @param file {string} - a http file path.
+ * @returns {string} - returns name of html file as a document create consumable name.
  * 
  * @example
  *  lean.inject('./widgets/todo-widget.html');
  *  var todoWidget = document.createElement('todo-widget');
  * 
  */
-
 module.exports.inject = function(path) {
 
     var tagLocation = document.head;
@@ -42,7 +42,6 @@ module.exports.inject = function(path) {
  *  var todoWidget = lean.require('./widgets/todo-widget.html');
  * 
  */
-
 module.exports.require = function(path) {
 
     var tagLocation = document.head;
