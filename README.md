@@ -1,4 +1,4 @@
-lean.js (1.0.0)
+lean.js (0.3.0)
 =========
 
 ![leanjs!](./about/lean.png)
