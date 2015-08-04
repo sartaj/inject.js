@@ -2,7 +2,6 @@ module.exports.inject = function(file) {
 
     "use strict";
 
-
     var firstScript;
 
     function readFirstScript() {
@@ -11,7 +10,6 @@ module.exports.inject = function(file) {
         // }
         return document.head;
     }
-
 
     function getFileType(file) {
 
