@@ -1,4 +1,4 @@
-lean-web-components (0.3.0)
+lean-web-components (0.3.1)
 =========
 
 [![npm status](http://img.shields.io/npm/v/lean-web-components.svg)](https://www.npmjs.org/package/lean-web-components)
