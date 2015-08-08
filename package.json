@@ -5,16 +5,16 @@
   "main": "lean.js",
   "scripts": {
 
-    "build-js"      : "browserify -e ./index.js -s lean | uglifyjs -mc > lean.min.js",
-    "watch-js"      : "watchify ./index.js -s lean -o lean.min.js -dv",
+    "build-js": "./node_modules/.bin/browserify -e ./index.js -s lean | ./node_modules/.bin/uglifyjs -mc > lean.min.js",
+    "watch-js": "./node_modules/.bin/watchify ./index.js -s lean -o lean.min.js -dv",
 
-    "watch-tests"   : "mochify --watch",
-    "phantom"       : "mochify --reporter tap --colors",
-    "cover"         : "mochify --reporter tap --plugin [ mochify-istanbul --report html ]",
+    "watch-tests": "./node_modules/.bin/mochify --watch",
+    "phantom": "./node_modules/.bin/mochify --reporter tap --colors",
+    "cover": "./node_modules/.bin/mochify --reporter tap --plugin [ ./node_modules/.bin/mochify-istanbul --report lcovonly ] && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
 
-    "test"          : "npm run phantom && npm run cover",
-    "build"         : "npm run build-js && npm run test",
-    "dev"           : "npm run watch-tests & npm run watch-js"
+    "test": "npm run phantom && npm run cover",
+    "build": "npm run build-js && npm run test",
+    "dev": "npm run watch-tests & npm run watch-js"
 
   },
   "repository": {
@@ -35,9 +35,11 @@
   "homepage": "https://github.com/sartaj/lean.js#readme",
   "devDependencies": {
     "browserify": "^11.0.1",
-    "watchify": "^3.3.1",
-    "tape": "^4.0.1",
+    "coveralls": "^2.11.3",
     "mochify": "^2.12.0",
-    "mochify-istanbul": "^2.3.0"
+    "mochify-istanbul": "^2.3.0",
+    "tape": "^4.0.1",
+    "uglifyjs": "^2.4.10",
+    "watchify": "^3.3.1"
   }
 }

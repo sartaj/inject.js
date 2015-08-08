@@ -1,7 +1,9 @@
 lean-web-components (0.3.0)
 =========
 
-[![Build Status](https://travis-ci.org/sartaj/lean-web-components.svg?branch=master)](https://travis-ci.org/sartaj/lean-web-components)
+[![npm status](http://img.shields.io/npm/v/lean-web-components.svg)](https://www.npmjs.org/package/lean-web-components)
+[![build status](https://secure.travis-ci.org/sartaj/lean.svg)](http://travis-ci.org/sartaj/lean)
+[![dependency status](https://david-dm.org/sartaj/lean.svg)](https://david-dm.org/sartaj/lean)
 
 ![leanjs!](./about/lean.png)
 
