@@ -38,7 +38,6 @@ module.exports.inject = function(path) {
  * @param file {string} - a http file path.
  * @returns {DOMElement} - HTML Imports return a createdDOM Element the import. This will execute the 'createdCallback' or 'created' function in the Web Component.
  * 
- * 
  * @example
  * // injects file and returns DOMNode  <todo-widget></todo-widget>
  *  var todoWidget = lean.require('./widgets/todo-widget.html');
@@ -52,9 +51,9 @@ module.exports.require = function(path) {
     var fileInfo = getFileInfo(path);
 
     checkExtension(fileInfo);
+    console.log(newElement, 'new');
 
     var newElement = document.createElement(fileInfo.name);
-
     if (newElement.constructor === HTMLElement) {
         injectHtml(path, tagLocation);
         newElement = document.createElement(fileInfo.name);
