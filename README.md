@@ -1,6 +1,8 @@
 lean-web-components (0.3.0)
 =========
 
+[![Build Status](https://travis-ci.org/sartaj/lean-web-components.svg?branch=master)](https://travis-ci.org/sartaj/lean-web-components)
+
 ![leanjs!](./about/lean.png)
 
 A micro-library (1.7kb) to lazy load and import Web Components.
