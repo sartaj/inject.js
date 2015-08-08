@@ -4,6 +4,7 @@ lean-web-components (0.3.0)
 [![npm status](http://img.shields.io/npm/v/lean-web-components.svg)](https://www.npmjs.org/package/lean-web-components)
 [![build status](https://secure.travis-ci.org/sartaj/lean.svg)](http://travis-ci.org/sartaj/lean)
 [![dependency status](https://david-dm.org/sartaj/lean.svg)](https://david-dm.org/sartaj/lean)
+[![coverage status](http://img.shields.io/coveralls/sartaj/lean.svg)](https://coveralls.io/r/sartaj/lean)
 
 ![leanjs!](./about/lean.png)
 
@@ -75,10 +76,10 @@ A micro-library (1.7kb) to lazy load and import Web Components.
 ## Design Goals
 
 #### Primary Goals
-1. Extremely Simple API 
+1. Simple API 
 2. Keep it small.
 3. Keep it fast.
-4. Properly tested.
+4. Work well with `stream-http`.
 
 #### Design decisions to achieve goals
 * Use simple injection techniques. (Simple script loads) [2] [3]

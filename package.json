@@ -6,9 +6,13 @@
   "scripts": {
     "build-js": "./node_modules/.bin/browserify -e ./index.js -s lean | ./node_modules/.bin/uglifyjs -mc > lean.min.js",
     "watch-js": "./node_modules/.bin/watchify ./index.js -s lean -o lean.min.js -dv",
-    "watch-tests": "./node_modules/.bin/mochify --watch",
-    "phantom": "./node_modules/.bin/mochify --reporter tap --colors",
-    "cover": "./node_modules/.bin/mochify --reporter tap --plugin [ mochify-istanbul --report lcovonly ]",
+    "cover": "./node_modules/.bin/run-browser test/index.js --phantom --istanbul html --istanbul lcov test/index.js",
+    "view-cover": "npm run cover && open coverage/index.html",
+    "phantom": "./node_modules/.bin/run-browser test/index.js  --phantom | tap-spec",
+    "browser": "./node_modules/.bin/run-browser test/index.js",
+    "travis-test": "npm test && npm run cover && ((cat coverage/lcov.info | coveralls) || exit 0)",
+    "readme-badges": "./node_modules/.bin/badgify",
+    "readme-docs": "./node_modules/.bin/jsdoc2md ./index.js",
     "test": "npm run phantom && npm run cover",
     "build": "npm run build-js && npm run test",
     "dev": "npm run watch-tests & npm run watch-js"
@@ -30,10 +34,10 @@
   },
   "homepage": "https://github.com/sartaj/lean.js#readme",
   "devDependencies": {
+    "badgify": "^0.3.0",
     "browserify": "^11.0.1",
     "coveralls": "^2.11.3",
-    "mochify": "^2.12.0",
-    "mochify-istanbul": "^2.3.0",
+    "run-browser": "^2.0.2",
     "tape": "^4.0.1",
     "uglifyjs": "^2.4.10",
     "watchify": "^3.3.1"
