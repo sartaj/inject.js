@@ -51,7 +51,6 @@ module.exports.require = function(path) {
     var fileInfo = getFileInfo(path);
 
     checkExtension(fileInfo);
-    console.log(newElement, 'new');
 
     var newElement = document.createElement(fileInfo.name);
     if (newElement.constructor === HTMLElement) {

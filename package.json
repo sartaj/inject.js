@@ -4,18 +4,14 @@
   "description": "A micro-library (2kb) to lazy load and import Web Components.",
   "main": "lean.js",
   "scripts": {
-
     "build-js": "./node_modules/.bin/browserify -e ./index.js -s lean | ./node_modules/.bin/uglifyjs -mc > lean.min.js",
     "watch-js": "./node_modules/.bin/watchify ./index.js -s lean -o lean.min.js -dv",
-
     "watch-tests": "./node_modules/.bin/mochify --watch",
     "phantom": "./node_modules/.bin/mochify --reporter tap --colors",
-    "cover": "./node_modules/.bin/mochify --reporter tap --plugin [ ./node_modules/.bin/mochify-istanbul --report lcovonly ] && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
-
+    "cover": "./node_modules/.bin/mochify --reporter tap --plugin [ mochify-istanbul --report lcovonly ]",
     "test": "npm run phantom && npm run cover",
     "build": "npm run build-js && npm run test",
     "dev": "npm run watch-tests & npm run watch-js"
-
   },
   "repository": {
     "type": "git",
