@@ -2,9 +2,9 @@ lean-web-components (0.3.0)
 =========
 
 [![npm status](http://img.shields.io/npm/v/lean-web-components.svg)](https://www.npmjs.org/package/lean-web-components)
-[![build status](https://secure.travis-ci.org/sartaj/lean.svg)](http://travis-ci.org/sartaj/lean)
-[![dependency status](https://david-dm.org/sartaj/lean.svg)](https://david-dm.org/sartaj/lean)
-[![coverage status](http://img.shields.io/coveralls/sartaj/lean.svg)](https://coveralls.io/r/sartaj/lean)
+[![build status](https://secure.travis-ci.org/sartaj/lean-web-components.svg)](http://travis-ci.org/sartaj/lean-web-components)
+[![dependency status](https://david-dm.org/sartaj/lean-web-components.svg)](https://david-dm.org/sartaj/lean-web-components)
+[![coverage status](http://img.shields.io/coveralls/sartaj/lean-web-components.svg)](https://coveralls.io/r/sartaj/lean-web-components)
 
 ![leanjs!](./about/lean.png)
 
