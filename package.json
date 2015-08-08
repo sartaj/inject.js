@@ -14,7 +14,7 @@
     "travis-test": "npm test && npm run cover && ((cat coverage/lcov.info | coveralls) || exit 0)",
     "readme-badges": "badgify",
     "readme-docs": "jsdoc2md ./index.js",
-    "test": "npm run phantom",
+    "test": "npm run phantom npm run cover",
     "build": "npm run build-js && npm run test",
     "dev": "npm run watch-tests & npm run watch-js"
   },
@@ -33,7 +33,7 @@
   "bugs": {
     "url": "https://github.com/sartaj/lean-web-components/issues"
   },
-  "homepage": "https://github.com/sartaj/lean-web-components#readme",
+  "homepage": "https://github.com/sartaj/lean-web-components",
   "devDependencies": {
     "badgify": "^0.3.0",
     "browserify": "^11.0.1",
