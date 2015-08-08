@@ -8,7 +8,7 @@
     "watch-js": "watchify ./index.js -s lean -o lean.min.js -dv",
     "cover": "run-browser test/index.js --phantom --istanbul html --istanbul lcov test/index.js",
     "view-cover": "npm run cover && open coverage/index.html",
-    "coveralls": "cat coverage/lcov.info | coveralls",
+    "coveralls": "npm run cover && cat coverage/lcov.info | coveralls",
     "phantom": "run-browser test/index.js  --phantom | tap-spec",
     "browser": "run-browser test/index.js",
     "travis-test": "npm test && npm run cover && ((cat coverage/lcov.info | coveralls) || exit 0)",
