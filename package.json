@@ -9,8 +9,8 @@
     "watch-js"      : "watchify ./index.js -s lean -o lean.min.js -dv",
 
     "watch-tests"   : "mochify --watch",
-    "phantom"       : "mochify",
-    "cover"         : "mochify --reporter tap --plugin [ mochify-istanbul --report html ]",
+    "phantom"       : "mochify --reporter tap",
+    "cover"         : "npm run phantom --plugin [ mochify-istanbul --report html ]",
     "test"          : "npm run phantom && npm run cover",
 
     "build"         : "npm run build-js",
